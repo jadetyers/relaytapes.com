@@ -1,29 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
 body {
-    font-family: 'Syncopate', sans-serif;
-    color: #fff;
     padding: 0;
     margin: 0;
-    text-decoration: none;
-    text-align: center;
-    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Syncopate', sans-serif;
     background-image: url('../img/1.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;  
     background-size: cover;
 }
 
+.header {
+    display: flex;
+    font-size: 30px;
+}
+
+.header a {
+    color: #cba8b0;
+    padding: 15px;
+    margin-left: auto;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    gap: 0.5em;
+}
+
 h1 {
-    font-size: 45px;
+    color: #fff;
+    font-size: 50px;
     margin: 0;
-    padding: 0;
 }
 
 a {
     color: #fff;
     text-decoration: none;
+    padding: 0.8em;
 }
 
 a:hover {
@@ -31,33 +50,16 @@ a:hover {
     transition: 0.2s;
 }
 
-.index p {
-    transform: translateY(-70%);
-}
-
-#social-media a {
-    width: 40px;
+.social-links a {
     font-size: 30px;
-    line-height: 5px;
-    padding: 5px;
-    display: inline-block;
-}
-
-#box {
-    display: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 0.3em;
 }
 
 button {
-    color: white;
+    color: #fff;
     border: 0;
     background: none;
-    font-size: 2vh;
+    font-size: 1.2em;
 }
 
 button:hover {
@@ -70,10 +72,8 @@ button:hover {
     display: none;
 }
 
-/* Media queries */
-
-@media (min-width: 320px) and (max-width: 1080px) {
-    #playButton, #stopButton {
-        font-size: 18px;
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 40px;
     }
 }
