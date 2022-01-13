@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+/* Home */
+
+#home {
+    font-family: 'Syncopate', sans-serif;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    background-color: black;
+    background-image: url('../img/1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+h1 {
+    font-size: 45px;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: coral;
+    transition: 0.2s;
+}
+
+.index p {
+    transform: translateY(-70%);
+}
+
+#social-media a {
+    width: 40px;
+    font-size: 30px;
+    line-height: 5px;
+    padding: 5px;
+    display: inline-block;
+}
+
+#box {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* About */
+
+#about {
+    font-family: 'Syncopate', sans-serif;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+#about-box {
+    display: none;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#about-box p {
+    font-family: 'Alata', sans-serif;
+    color: black;
+    background-color: yellow;
+    padding: 40px;
+    margin: 0;
+    font-size: 2rem;
+}
+
+#aboutLink:hover {
+    color: coral;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+::selection {
+    background: black;
+    color: white;
+}
+
+::-moz-selection {
+    background: black;
+    color: white;
+}
+
+#about-box a {
+    color: black;
+    text-decoration: underline solid blue 1px;
+}
+
+#about-box a:hover {
+    color: blue;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+/* Buttons */
+
+#backArrow {
+    margin-top: 30px;
+    font-size: 35px;
+}
+
+#backArrow:hover {
+    color: blue;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button {
+    color: white;
+    border: 0;
+    background: none;
+    font-size: 2vh;
+}
+
+button:hover {
+    color: coral;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#stopButton {
+    display: none;
+}
+
+/* Media queries */
+
+@media (min-width: 320px) and (max-width: 1080px) {
+    #playButton, #stopButton {
+        font-size: 18px;
+    }
+
+    #about-box {
+        position: absolute;
+        width: 80%;
+    }
+
+    #about-box p {
+        padding: 25px;
+        font-size: 20px;
+    }
+
+    #backArrow {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+}
