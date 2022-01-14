@@ -31,6 +31,16 @@ body {
     flex-direction: column;
     margin: auto;
     gap: 0.5em;
+    -webkit-animation: fadein 5s;
+    -moz-animation: fadein 5s;
+    -ms-animation: fadein 5s;
+    -o-animation: fadein 5s;
+    animation: fadein 5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 h1 {
@@ -75,5 +85,9 @@ button:hover {
 @media screen and (max-width: 480px) {
     h1 {
         font-size: 40px;
+    }
+
+    .social-links a {
+        font-size: 25px;
     }
 }

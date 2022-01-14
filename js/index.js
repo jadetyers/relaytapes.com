@@ -1,37 +1,16 @@
-$(document).ready(function() {
-    var music = document.createElement('audio');
-    music.setAttribute('src', '../22820-145.mp3');
-    $.get();
-    music.addEventListener('load', function() {
-        music.play();
-    }, true);
-    music.addEventListener('ended', function() {
-        this.currentTime = 0;
-        this.play();
-    }, false);
+let audio = document.getElementById('audio');
+let audioButton = document.getElementById('audioButton');
+let count = 0;
 
-    $("#box").fadeIn(2000);
-    $("#box").show();
-
-    $('#playButton').click(function() {
-        music.play();
-        $('#playButton').hide();
-        $('#stopButton').show();
-    });
-
-    $('#stopButton').click(function() {
-        music.pause();
-        $('#playButton').show();
-        $('#stopButton').hide();
-    });
-
-    $('#aboutLink').click(function() {
-        $('#box').fadeOut();
-        $('#about-box').fadeIn();
-    });
-
-    $('#backArrow').click(function() {
-        $('#about-box').fadeOut();
-        $('#box').show();
-    });
-});
+function playStop() {
+    if (count == 0) {
+        count = 1;
+        audio.play();
+        audio.loop = true;
+        audioButton.className = 'fas fa-stop';
+    } else {
+        audioButton.className = 'fas fa-play';
+        count = 0;
+        audio.pause();
+    }
+}
