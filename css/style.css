@@ -20,8 +20,13 @@ body {
 
 .header a {
     color: #cba8b0;
-    padding: 15px;
     margin-left: auto;
+    transition: transform 2s;
+}
+
+.header a:hover {
+    transition: transform 2s;
+    transform: rotate(360deg);
 }
 
 .content {
